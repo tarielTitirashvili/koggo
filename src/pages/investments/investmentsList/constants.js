@@ -8,7 +8,7 @@ export const BRAND_ICONS = {
   BAC: 'https://img.icons8.com/?size=512&id=QxCQEYp6HT8Z&format=png',
 }
 
-// healthcare CLOV
-// consumer electronics GM
-// finances BAC
-// technology
+export const HEALTHCARE_COMPANIES = ['CLOV']
+export const INDUSTRY_COMPANIES = ['GM']
+export const FINANCIAL_COMPANIES = ['BAC']
+export const TECHNOLOGY_COMPANIES = ['AMD', 'NVDA', 'AAPL', 'MSFT']
