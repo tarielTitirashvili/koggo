@@ -1,8 +1,8 @@
-
+const baseURL = 'https://localhost:7141'
 
 export const fetchStockDetails = async (onSuccess, onError=()=>{}) => {
   try {
-    const response = await fetch('https://localhost:7141/Stocks/details', {
+    const response = await fetch(`${baseURL}/Stocks/details`, {
       method: 'GET', // default method for fetch
       headers: {
         'Content-Type': 'application/json', // optional but good to specify
@@ -23,7 +23,7 @@ export const fetchStockDetails = async (onSuccess, onError=()=>{}) => {
 
 export const setNotificationsOnStockPriceChange = async (params, onSuccess, onError=()=>{}) => {
   try {
-    const response = await fetch('https://localhost:7141/Configurations', {
+    const response = await fetch(`${baseURL}/Configurations`, {
       method: 'POST', // default method for fetch
       headers: {
         'Content-Type': 'application/json', // optional but good to specify
