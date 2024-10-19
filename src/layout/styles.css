@@ -1,0 +1,76 @@
+.layout{
+  background-color: var(--classic-bg);
+  color: var(--classic-text);
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.layout_secondary{
+  padding: 8px;
+}
+.header_bg_image{
+  background-image: url(https://static.vecteezy.com/system/resources/previews/007/153/281/non_2x/abstract-black-background-with-diagonal-lines-modern-dark-abstract-texture-design-for-presentations-or-business-free-vector.jpg)
+}
+:root{
+  --classic-bg: #ffffff;
+  --classic-bg-secondary: #c2c2b0;
+  --classic-text: #30302e;
+  --classic-text-secondary: #5f5f5c;
+  --classic-accent: #FFD700;
+  --negative-change: red;
+  --positive-change: rgb(48, 185, 14);
+  --button: #00adee;
+}
+
+.light{
+  --classic-bg: #ffffff;
+  --classic-bg-secondary: #c2c2b0;
+  --classic-text: #30302e;
+  --classic-text-secondary: #5f5f5c;
+  --classic-accent: #FFD700;
+  --negative-change: red;
+  --positive-change: rgb(48, 185, 14);
+  --button: #00adee;
+}
+
+.dark{
+  --classic-bg: #121212 ;
+  --classic-bg-secondary: #30302e;
+  --classic-text: #E0E0E0;
+  --classic-text-secondary: #dad3d380;
+  --classic-accent: #00FF00;
+  --negative-change: red;
+  --positive-change: rgb(48, 185, 14);
+  --button: #00adee;
+}
+
+.blue_orange{
+  --classic-bg: #FFFFFF;
+  --classic-bg-secondary: #c2c2b0;
+  --classic-text: #000000;
+  --classic-text-secondary: #31303080;
+  --classic-accent: #FFA500;
+  --negative-change: red;
+  --positive-change: rgb(48, 185, 14);
+  --button: #00adee;
+}
+.green_teal{
+  --classic-bg: #1E1E1E;
+  --classic-bg-secondary: #30302e;
+  --classic-text: #C8C8C8;
+  --classic-text-secondary: #999696;
+  --classic-accent: #00FF00;
+  --negative-change: red;
+  --positive-change: rgb(48, 185, 14);
+  --button: #00adee;
+}
+.purple_yellow{
+  --classic-bg: #282828;
+  --classic-bg-secondary: #3a3a39;
+  --classic-text: #E0E0E0;
+  --classic-text-secondary: #9e9b9b;
+  --classic-accent: #FFFF00;
+  --negative-change: red;
+  --positive-change: rgb(48, 185, 14);
+  --button: #00adee;
+}
