@@ -38,6 +38,9 @@ const Home = () => {
           </CardWrapper>
         </div>
       </Card>
+      <div style={{height: '800px'}}>
+
+      </div>
     </div>
   )
 }
