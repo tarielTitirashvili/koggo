@@ -1,8 +1,9 @@
 import { useState } from 'react'
-import DotsIconButton from '../../../../components/dotsButton'
+// import DotsIconButton from '../../../../components/dotsButton'
 import { BRAND_ICONS } from '../constants'
 import MyModal from './modal/inex'
 import { InvestmentsListItemWrapper } from './styles'
+import NotificationAddIcon from '@mui/icons-material/NotificationAdd';
 
 const InvestmentsListItem = ({ item }) => {
 
@@ -30,7 +31,11 @@ const InvestmentsListItem = ({ item }) => {
         </p>
         <p className={`${diffClassNameGenerator()}`}>▼&nbsp;{item.diff}&nbsp;%</p>
       </span>
-      <DotsIconButton onClick={()=>setOpen(true)}/>
+      {/* <DotsIconButton onClick={()=>setOpen(true)}/> */}
+        <span onClick={()=>setOpen(true)}>
+          <NotificationAddIcon />
+        </span>
+        
       <MyModal open={open} handleClose={()=>setOpen(false)} companyKey={item.symbol}/>
     </InvestmentsListItemWrapper>
   )

@@ -21,8 +21,8 @@ const MyModal = ({ open, handleClose, companyKey }) => {
   const handleSubmit = () =>{
     setNotificationsOnStockPriceChange({
       "stockIdentifier": companyKey,
-      "minPercent": +maxGain,
-      "maxPercent": +maxLoss,
+      "minPercent": +maxLoss,
+      "maxPercent": +maxGain,
     },
     ()=>handleClose()
   )

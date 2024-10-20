@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { fetchStockDetails } from '../../API'
 import InvestmentsList from './investmentsList'
-import InvestmentsChart from './investmentsChart'
+// import InvestmentsChart from './investmentsChart'
 import {
   FINANCIAL_COMPANIES,
   HEALTHCARE_COMPANIES,
@@ -10,15 +10,16 @@ import {
 } from './investmentsList/constants'
 import { InvestContainer, InvestmentsTitle, LoaderContainer } from './styles'
 import { CircularProgress } from '@mui/material'
+import PieChartWithCustomizedLabel from './muiChart'
 
 const Investments = () => {
   const [stockData, setStockData] = useState([])
   const [investmentsPerStor, setInvestmentsPerStor] = useState([])
 
   useEffect(() => {
-    if (stockData.length > 0) {
+    if (stockData?.length > 0) {
       const investments = [
-        { x: 'Health', y: 0 },
+        { x: 'Health', y: 0, },
         { x: 'Fin', y: 0 },
         { x: 'Ind', y: 0 },
         { x: 'IT', y: 0 },
@@ -43,12 +44,13 @@ const Investments = () => {
   }, [])
   return (
     <InvestContainer>
-      {stockData.length > 0 ?(
+      {stockData?.length > 0 ?(
         <>
           <InvestmentsTitle>
             Portfolio Allocation
           </InvestmentsTitle>
-          <InvestmentsChart stocksPerSectors={investmentsPerStor} />
+          <PieChartWithCustomizedLabel  investmentsPerStor={investmentsPerStor}/>
+          {/* <InvestmentsChart stocksPerSectors={investmentsPerStor} /> */}
           <InvestmentsList stockData={stockData} />
         </>
       ):

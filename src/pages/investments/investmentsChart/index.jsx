@@ -3,7 +3,6 @@ import { useTheme } from '../../../layout/themeSwitcher/context'
 
 const InvestmentsChart = ({stocksPerSectors}) => {
   const { colorForOtherLibs } = useTheme()
-
   return (
   <VictoryPie
     colorScale={["tomato", "orange", "gold", "cyan", "navy" ]}
