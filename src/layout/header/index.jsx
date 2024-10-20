@@ -12,16 +12,15 @@ import MailIcon from '@mui/icons-material/Mail'
 import { MenuIconContainer, NavContainer } from './styles'
 import MenuIcon from '@mui/icons-material/Menu'
 import TrendingUpIcon from '@mui/icons-material/TrendingUp'
-// import { useNavigate } from 'react-router-dom';
-import useHistory from './useHistory'
+import { useNavigate } from 'react-router-dom'
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 
 export default function Header() {
   const [state, setState] = React.useState({
     top: false,
   })
 
-  const history = useHistory()
-
+  const navigate = useNavigate()
   const toggleDrawer = (anchor, open) => (event) => {
     if (
       event &&
@@ -44,7 +43,15 @@ export default function Header() {
       <NavContainer>
         <List>
           <ListItem disablePadding>
-            <ListItemButton onClick={()=>history.push('/investments')}>
+            <ListItemButton onClick={()=>navigate('/')}>
+              <ListItemIcon>
+                <HomeOutlinedIcon className='icon-color' />
+              </ListItemIcon>
+              <h3 className='text'>Home</h3>
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton onClick={()=>navigate('/investments')}>
               <ListItemIcon>
                 <TrendingUpIcon className='icon-color' />
               </ListItemIcon>
