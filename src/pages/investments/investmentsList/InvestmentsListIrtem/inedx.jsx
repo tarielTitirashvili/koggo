@@ -1,6 +1,6 @@
 import { useState } from 'react'
 // import DotsIconButton from '../../../../components/dotsButton'
-import { BRAND_ICONS } from '../constants'
+import { BRAND_ICONS, HEALTHCARE_COMPANIES } from '../constants'
 import MyModal from './modal/inex'
 import { InvestmentsListItemWrapper } from './styles'
 import NotificationAddIcon from '@mui/icons-material/NotificationAdd';
@@ -18,6 +18,10 @@ const InvestmentsListItem = ({ item }) => {
     else
       return 'price_change_zero'
   }
+  function roundToTwo(num) {
+    return Math.round(num * 100) / 100;
+  }
+  
   return (
     <InvestmentsListItemWrapper>
       <img src={BRAND_ICONS[item.displaySymbol]} className="icon" alt={''} />
@@ -27,7 +31,7 @@ const InvestmentsListItem = ({ item }) => {
       </span>
       <span>
         <p className='price_styles'>
-          {item.price}&nbsp;$
+          {HEALTHCARE_COMPANIES.includes(item.symbol)? roundToTwo(item.price * 60) : roundToTwo(item.price)}&nbsp;$
         </p>
         <p className={`${diffClassNameGenerator()}`}>▼&nbsp;{item.diff}&nbsp;%</p>
       </span>

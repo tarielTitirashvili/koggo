@@ -28,11 +28,11 @@ const Investments = () => {
         if (TECHNOLOGY_COMPANIES.includes(stock.symbol))
           investments[3].y = investments[3].y + stock.price
         else if (FINANCIAL_COMPANIES.includes(stock.symbol))
-          investments[1].y = investments[1].y + stock.price * 5
+          investments[1].y = investments[1].y + stock.price
         else if (INDUSTRY_COMPANIES.includes(stock.symbol))
-          investments[2].y = investments[2].y + stock.price * 5
+          investments[2].y = investments[2].y + stock.price
         else if (HEALTHCARE_COMPANIES.includes(stock.symbol))
-          investments[0].y = investments[0].y + stock.price * 15
+          investments[0].y = investments[0].y + stock.price * 60
       })
 
       setInvestmentsPerStor(investments)
