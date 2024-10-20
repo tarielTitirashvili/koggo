@@ -17,7 +17,4 @@ height: 100vh;
 
 export const MenuIconContainer = styled.span`
 pad: 12px;
-.icon-styles{
-  fill: var(--classic-text);
-}
 `

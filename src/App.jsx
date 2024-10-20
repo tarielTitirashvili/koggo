@@ -4,6 +4,7 @@ import Home from './pages/home'
 import Investments from './pages/investments'
 import Layout from './layout'
 import { Route, Routes } from 'react-router-dom'
+import { ThemeProvider } from './layout/themeSwitcher/context'
 
 // const router = createBrowserRouter([
 //   {
@@ -15,14 +16,18 @@ import { Route, Routes } from 'react-router-dom'
 //     element: <Investments />,
 //   },
 // ])
- 
+
 function App() {
-  return <Layout>
-  <Routes>
-    <Route path='/' element={<Home/>} />
-    <Route path='/investments' element={<Investments/>} />
-  </Routes>
-  </Layout>
+  return (
+    <ThemeProvider>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/investments" element={<Investments />} />
+        </Routes>
+      </Layout>
+    </ThemeProvider>
+  )
   // <Layout setHome={setHome}>
   //   {home ? <Home /> : <Investments />}
   // </Layout>

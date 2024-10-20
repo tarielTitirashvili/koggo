@@ -2,7 +2,7 @@
   background-color: var(--classic-bg);
   color: var(--classic-text);
   width: 100%;
-  height: 100vh;
+  min-height: 100svh;
   position: relative;
 }
 .layout_secondary{
@@ -20,6 +20,7 @@
   --negative-change: red;
   --positive-change: rgb(48, 185, 14);
   --button: #00adee;
+  --burger-button: #fff;
 }
 
 .light{
@@ -31,6 +32,7 @@
   --negative-change: red;
   --positive-change: rgb(48, 185, 14);
   --button: #00adee;
+  --burger-button: #fff;
 }
 
 .dark{
@@ -42,17 +44,19 @@
   --negative-change: red;
   --positive-change: rgb(48, 185, 14);
   --button: #00adee;
+  --burger-button: #fff;
 }
 
 .blue_orange{
-  --classic-bg: #FFFFFF;
-  --classic-bg-secondary: #c2c2b0;
+  --classic-bg: #ff0;
+  --classic-bg-secondary: rgb(196, 196, 7);
   --classic-text: #000000;
   --classic-text-secondary: #31303080;
   --classic-accent: #FFA500;
   --negative-change: red;
   --positive-change: rgb(48, 185, 14);
   --button: #00adee;
+  --burger-button: #ff0;
 }
 .green_teal{
   --classic-bg: #1E1E1E;
@@ -63,6 +67,7 @@
   --negative-change: red;
   --positive-change: rgb(48, 185, 14);
   --button: #00adee;
+  --burger-button: #fff;
 }
 .purple_yellow{
   --classic-bg: #282828;
@@ -73,4 +78,5 @@
   --negative-change: red;
   --positive-change: rgb(48, 185, 14);
   --button: #00adee;
+  --burger-button: #fff;
 }
