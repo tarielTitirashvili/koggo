@@ -8,7 +8,8 @@ import {
   INDUSTRY_COMPANIES,
   TECHNOLOGY_COMPANIES,
 } from './investmentsList/constants'
-import { InvestContainer, InvestmentsTitle } from './styles'
+import { InvestContainer, InvestmentsTitle, LoaderContainer } from './styles'
+import { CircularProgress } from '@mui/material'
 
 const Investments = () => {
   const [stockData, setStockData] = useState([])
@@ -42,7 +43,7 @@ const Investments = () => {
   }, [])
   return (
     <InvestContainer>
-      {stockData &&(
+      {stockData.length > 0 ?(
         <>
           <InvestmentsTitle>
             Portfolio Allocation
@@ -50,6 +51,11 @@ const Investments = () => {
           <InvestmentsChart stocksPerSectors={investmentsPerStor} />
           <InvestmentsList stockData={stockData} />
         </>
+      ):
+      (
+        <LoaderContainer>
+          <CircularProgress />
+        </LoaderContainer>
       )
     }
     </InvestContainer>
