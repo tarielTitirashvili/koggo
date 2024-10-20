@@ -8,7 +8,7 @@ import {
   INDUSTRY_COMPANIES,
   TECHNOLOGY_COMPANIES,
 } from './investmentsList/constants'
-import { InvestmentsTitle } from './styles'
+import { InvestContainer, InvestmentsTitle } from './styles'
 
 const Investments = () => {
   const [stockData, setStockData] = useState([])
@@ -41,8 +41,8 @@ const Investments = () => {
     fetchStockDetails((data) => setStockData(data))
   }, [])
   return (
-    <div>
-      {stockData && (
+    <InvestContainer>
+      {stockData &&(
         <>
           <InvestmentsTitle>
             Portfolio Allocation
@@ -50,8 +50,9 @@ const Investments = () => {
           <InvestmentsChart stocksPerSectors={investmentsPerStor} />
           <InvestmentsList stockData={stockData} />
         </>
-      )}
-    </div>
+      )
+    }
+    </InvestContainer>
   )
 }
 
