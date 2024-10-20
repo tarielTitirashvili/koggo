@@ -13,11 +13,10 @@ const colorsForOtherLibraries = {
   light: { className: '#30302e' },
   dark: { className: '#E0E0E0' },
   blueOrange: { className: '#000000' },
-  greenTeal: { className: '#C8C8C8' },
-  purpleYellow: { className: '#E0E0E0' }
+  greenTeal: { className: '#ff0' },
 }
 
-const themeNames = ['dark', 'light', 'blueOrange', 'greenTeal', 'purpleYellow'];
+const themeNames = ['dark', 'light', 'blueOrange', 'greenTeal'];
 
 // Create context
 const ThemeContext = createContext();
