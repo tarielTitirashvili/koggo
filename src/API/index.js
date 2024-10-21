@@ -1,4 +1,4 @@
-const baseURL = 'http://44.207.32.191:5017'
+const baseURL = 'http://44.207.32.191:5017' //https://localhost:7141
 
 export const fetchStockDetails = async (onSuccess, onError=()=>{}) => {
   try {
